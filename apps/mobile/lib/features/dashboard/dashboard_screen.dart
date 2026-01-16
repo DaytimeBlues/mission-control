@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:lucide_icons/lucide_icons.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -13,7 +11,7 @@ class DashboardScreen extends StatelessWidget {
         centerTitle: false,
         actions: [
           IconButton(
-            icon: const Icon(LucideIcons.settings),
+            icon: const Icon(Icons.settings),
             onPressed: () {},
           ),
         ],
@@ -28,7 +26,7 @@ class DashboardScreen extends StatelessWidget {
               style: Theme.of(context).textTheme.titleLarge,
             ),
             const SizedBox(height: 16),
-            const _QuickStatsGrid().animate().fadeIn().slideY(begin: 0.2, end: 0),
+            const _QuickStatsGrid(),
             const SizedBox(height: 32),
             Text(
               'Recent Activity',
@@ -36,8 +34,7 @@ class DashboardScreen extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             // Placeholder for activity feed
-            const Card(child: SizedBox(height: 200, child: Center(child: Text("Activity Feed"))))
-                .animate(delay: 200.ms).fadeIn(),
+            const Card(child: SizedBox(height: 200, child: Center(child: Text("Activity Feed")))),
           ],
         ),
       ),
@@ -57,10 +54,10 @@ class _QuickStatsGrid extends StatelessWidget {
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       children: const [
-        _StatCard(title: 'Projects', value: '4', icon: LucideIcons.folder),
-        _StatCard(title: 'Active', value: '3', icon: LucideIcons.checkCircle),
-        _StatCard(title: 'Deploying', value: '1', icon: LucideIcons.rocket),
-        _StatCard(title: 'Alerts', value: '0', icon: LucideIcons.alertTriangle),
+        _StatCard(title: 'Projects', value: '4', icon: Icons.folder),
+        _StatCard(title: 'Active', value: '3', icon: Icons.check_circle),
+        _StatCard(title: 'Deploying', value: '1', icon: Icons.rocket_launch),
+        _StatCard(title: 'Alerts', value: '0', icon: Icons.warning),
       ],
     );
   }

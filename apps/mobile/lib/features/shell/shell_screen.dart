@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:lucide_icons/lucide_icons.dart';
 
 class ShellScreen extends StatelessWidget {
   final Widget child;
@@ -16,19 +15,19 @@ class ShellScreen extends StatelessWidget {
         onDestinationSelected: (index) => _onItemTapped(index, context),
         destinations: const [
           NavigationDestination(
-            icon: Icon(LucideIcons.layoutDashboard),
+            icon: Icon(Icons.dashboard),
             label: 'Dashboard',
           ),
           NavigationDestination(
-            icon: Icon(LucideIcons.folder),
+            icon: Icon(Icons.folder),
             label: 'Projects',
           ),
           NavigationDestination(
-            icon: Icon(LucideIcons.rocket),
+            icon: Icon(Icons.rocket_launch),
             label: 'Deploy',
           ),
           NavigationDestination(
-            icon: Icon(LucideIcons.activity),
+            icon: Icon(Icons.list_alt),
             label: 'Activity',
           ),
         ],
