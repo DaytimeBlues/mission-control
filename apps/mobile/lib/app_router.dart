@@ -3,11 +3,19 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'features/shell/shell_screen.dart';
 import 'features/dashboard/dashboard_screen.dart';
+import 'features/workflow/screens/workflow_screen.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
   return GoRouter(
     initialLocation: '/dashboard',
     routes: [
+      // Workflow route (full screen, no bottom nav)
+      GoRoute(
+        path: '/workflow',
+        builder: (context, state) => const WorkflowScreen(),
+      ),
+      
+      // Main shell with bottom navigation
       ShellRoute(
         builder: (context, state, child) => ShellScreen(child: child),
         routes: [

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -37,6 +38,11 @@ class DashboardScreen extends StatelessWidget {
             const Card(child: SizedBox(height: 200, child: Center(child: Text("Activity Feed")))),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () => context.push('/workflow'),
+        icon: const Icon(Icons.add),
+        label: const Text('New Feature'),
       ),
     );
   }
