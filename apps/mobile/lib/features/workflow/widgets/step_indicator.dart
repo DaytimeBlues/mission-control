@@ -108,7 +108,7 @@ class _StepItem extends StatelessWidget {
               width: isCurrent ? 48 : 40,
               height: isCurrent ? 48 : 40,
               decoration: BoxDecoration(
-                color: isCurrent ? color : color.withOpacity(0.2),
+                color: isCurrent ? color : color.withValues(alpha: 0.2),
                 shape: BoxShape.circle,
                 border: isCurrent
                     ? Border.all(color: color, width: 3)
