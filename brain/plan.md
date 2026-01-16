@@ -3,16 +3,18 @@
 ## Current Phase: Phase 0 - Foundation
 
 ### Todo
-- [ ] Initialize Git repository
-- [ ] Create GitHub remote (if possible)
-- [ ] Set up `melos` for monorepo management (optional for now, started with simple structure)
-- [ ] Configure analysis_options.yaml
-- [ ] Add basic dependencies (riverpod, go_router, firebase_core)
+- [x] Initialize Git repository
+- [x] Create GitHub remote (https://github.com/DaytimeBlues/mission-control)
+- [x] Fix project structure (move platform folders to apps/mobile)
+- [x] Configure dependencies (freezed, riverpod, go_router)
+- [ ] Create StepIndicator widget + tests
+- [ ] Create WorkflowScreen + tests
+- [ ] Integrate workflow into app router
 
-### In Codebase
-- [x] Create project structure
-- [x] Initialize Repo Brain (AGENTS.md, spec.md, plan.md)
-- [x] `flutter create` mobile app
+### In Progress
+- [x] WorkflowState model (Freezed) - COMPLETE
+- [x] WorkflowProvider (Riverpod) - COMPLETE, 10/10 tests passing
+- [ ] StepIndicator widget - NEXT
 
 ## Backlog
 ### Phase 1: Core Agentic Triad
